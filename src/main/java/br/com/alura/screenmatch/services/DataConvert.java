@@ -9,7 +9,7 @@ public class DataConvert implements IDataConvert {
 
 
 
-    public <T> T obterDatas(String json, Class<T> classNew) {
+    public <T> T obterDatas(String json, Class<T> classNew) { // <T> T --> Generics permitem criar classes, interfaces e métodos que podem trabalhar com tipos desconhecidos ou parâmetros genéricos.
         try {
             return mapper.readValue(json, classNew);
         } catch (JsonProcessingException e) {
